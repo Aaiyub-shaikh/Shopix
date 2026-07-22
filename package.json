@@ -1,0 +1,31 @@
+{
+  "name": "shopix",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Aaiyub-shaikh/Shopix#readme",
+  "bugs": {
+    "url": "https://github.com/Aaiyub-shaikh/Shopix/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aaiyub-shaikh/Shopix.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "build": "npm --prefix frontend run build",
+    "start": "npm --prefix backend start",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend start",
+    "seed": "npm --prefix backend run seed"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.12.0",
+    "concurrently": "^10.0.3",
+    "react-redux": "^9.3.0"
+  }
+}
